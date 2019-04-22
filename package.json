@@ -1,0 +1,18 @@
+{
+  "name": "orda-task",
+  "version": "1.0.0",
+  "description": "CLI based Node App that outputs the result of subtraction given 1 to n+1 numbers.",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "app run test"
+  },
+  "keywords": [
+    "JavaScript",
+    "Fun"
+  ],
+  "author": "Michael Bosomefi Chamunorwa",
+  "license": "ISC"
+}
