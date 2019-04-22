@@ -18,12 +18,12 @@ const sub = (...numbers) => {
         } else {
             //loop through each element in numbers object
             for (let i = 1; i < numbers.length; i++) {
-                //check if number
-                if (_.isNumber(numbers[i])) {
-                    total -= numbers[i];
-                } else {
-                    return false;
-                }
+                //check if value at index is a number.
+                _.isNumber(numbers[i])
+                    ? //if value at index is a number then subtract from total
+                      (total -= numbers[i])
+                    : //if value at index is not a number then assign value false and terminate operation
+                      (total = false);
             }
             return total;
         }
