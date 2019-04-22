@@ -1,22 +1,25 @@
 {
-  "name": "orda-task",
-  "version": "1.0.0",
-  "description": "CLI based Node App that outputs the result of subtraction given 1 to n+1 numbers.",
-  "main": "app.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "app run test"
-  },
-  "keywords": [
-    "JavaScript",
-    "Fun"
-  ],
-  "author": "Michael Bosomefi Chamunorwa",
-  "license": "ISC",
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4"
-  }
+    "name": "orda-task",
+    "version": "1.0.0",
+    "description": "CLI based Node App that outputs the result of subtraction given 1 to n+1 numbers.",
+    "main": "app.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "mocha tests/*.tests.js"
+    },
+    "keywords": [
+        "JavaScript",
+        "Fun"
+    ],
+    "author": "Michael Bosomefi Chamunorwa",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.1.4"
+    },
+    "dependencies": {
+        "lodash": "^4.17.11"
+    }
 }
