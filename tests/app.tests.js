@@ -6,7 +6,7 @@ const { sub } = require('../function/sub.function');
 describe('Basic tests for sub() function', () => {
     it('should return error message if a non numeric value exists', () => {
         let result = sub('a', 3);
-        result.should.be.false;
+        assert.equal(isNaN(result), true);
     });
     it('should return notification if no arguments are passed', () => {
         let result = sub();
