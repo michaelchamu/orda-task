@@ -33,7 +33,6 @@ To run tests:
 ```bash
 cd orda-task
 npm test
-Explain what these tests test and why
 ```
 
 ```
