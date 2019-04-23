@@ -9,28 +9,18 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```
-Node.js
-```
-
-```
-NPM
+1. Node.js
+2. NPM
 ```
 
 ### Installing
 
 To install:
 
-```
+```bash
 git clone https://github.com/michaelchamu/orda-task.git
-```
-
 cd orda-task
-
-```
 npm install
-```
-
-```
 node app.js
 ```
 
@@ -40,17 +30,10 @@ Follow the onscreen prompts
 
 To run tests:
 
-```
+```bash
 cd orda-task
-```
-
-```
 npm test
-
-### Break down into end to end tests
-
 Explain what these tests test and why
-
 ```
 
 Give an example
