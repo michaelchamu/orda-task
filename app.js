@@ -3,33 +3,18 @@ const { sub } = require('./function/sub.function');
 const { collectUserInput } = require('./function/inputs.function');
 //default values returned from sub() function
 const a = sub(9); // a should be 9
-console.log(a);
+console.log(`The result of sub(9) is ${a}`);
 const b = sub(9, 4); // b should be 5
-console.log(b);
+console.log(`The result of sub(9, 4) ${b}`);
 const c = sub(14, 2, 6); // c should be 6
-console.log(c);
-
+console.log(`The result of sub(14, 2, 6) ${c}`);
 const main = async () => {
     const inputs = await collectUserInput();
-
-    // for (let i = 0; i < inputs.length; i++) {
-    //     let array = _.split(inputs[i].numbers, ',');
-    //     let convertedArray = _.map(array, x => {
-    //         return parseInt(x);
-    //     });
-    //     let result = sub(...convertedArray);
-    //     console.log(
-    //         `The result of sub() on ${inputs[i].numbers} is: ${result}`
-    //     );
-    // }
-
     for (elements of inputs) {
-        console.log(elements.numbers);
-        let array = _.split(elements.numbers, ',');
-        let convertedArray = _.map(array, x => {
-            return parseInt(x);
+        let array = _.map(_.split(elements.numbers, ','), value => {
+            return parseInt(value);
         });
-        let result = sub(...convertedArray);
+        let result = sub(...array);
         console.log(`The result of sub() on ${elements.numbers} is: ${result}`);
     }
 };
