@@ -52,7 +52,7 @@ Give an example
 
 ## Authors
 
--   **Mike** - _Initial work_ - [PurpleBooth](https://github.com/michaelchamu)
+-   **Mike** - _Initial work_ - [Mike Mike Mike](https://github.com/michaelchamu)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
