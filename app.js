@@ -21,12 +21,17 @@ const main = async () => {
             return parseInt(value);
         });
         let result = sub(...array);
-
-        console.log(
+        cfonts.say(
             `The result of sub() on ${elements.numbers} is: ${
                 isNaN(result) ? 'Non numeric value detected' : result
-            }`
+            }`,
+            {
+                font: 'console',
+                align: 'center',
+                colors: ['red']
+            }
         );
+        console.log();
     }
 };
 //execute the default values then the main function that asks for user input
