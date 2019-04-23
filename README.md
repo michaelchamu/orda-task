@@ -37,13 +37,6 @@ Explain what these tests test and why
 ```
 
 ```
-
-## Authors
-
--   **Mike** - _Initial work_ - [Mike Mike Mike](https://github.com/michaelchamu)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
