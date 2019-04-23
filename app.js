@@ -12,15 +12,25 @@ console.log(c);
 const main = async () => {
     const inputs = await collectUserInput();
 
-    for (let i = 0; i < inputs.length; i++) {
-        let array = _.split(inputs[i].numbers, ',');
+    // for (let i = 0; i < inputs.length; i++) {
+    //     let array = _.split(inputs[i].numbers, ',');
+    //     let convertedArray = _.map(array, x => {
+    //         return parseInt(x);
+    //     });
+    //     let result = sub(...convertedArray);
+    //     console.log(
+    //         `The result of sub() on ${inputs[i].numbers} is: ${result}`
+    //     );
+    // }
+
+    for (elements of inputs) {
+        console.log(elements.numbers);
+        let array = _.split(elements.numbers, ',');
         let convertedArray = _.map(array, x => {
             return parseInt(x);
         });
         let result = sub(...convertedArray);
-        console.log(
-            `The result of sub() on ${inputs[i].numbers} is: ${result}`
-        );
+        console.log(`The result of sub() on ${elements.numbers} is: ${result}`);
     }
 };
 
