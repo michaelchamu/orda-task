@@ -1,5 +1,7 @@
 const _ = require('lodash');
+const inquirer = require('inquirer');
 const { sub } = require('./function/sub.function');
+
 //default values returned from sub() function
 const a = sub(9); // a should be 9
 console.log(a);
@@ -12,20 +14,41 @@ console.log(c);
 //send inpu to function
 //print result
 //ask user to continue
-const readline = require('readline');
-const rl = readline.createInterface(process.stdin, process.stdout);
-rl.setPrompt(
-    'Enter number. You can enter multiple numbers separated by a comma. >'
-);
-rl.prompt();
-rl.on('line', line => {
-    //obtain values input by user and create an array object using split
-    //after this operation, the values will be be separated
-    let input = _.split(line, ',');
-    //always convert to integers before passing to sub function
-    let integers = input.map(value => parseInt(value));
-    //once you have a set of integers in an array, pass the array as a parameter
-    //use the rest
-    let x = sub(...integers);
-    console.log('Result from function: ' + x);
-});
+
+const collectInputs = async (inputs = []) => {
+    const prompts = [
+        {
+            type: 'input',
+            name: 'numbers',
+            message:
+                'Enter numbers separated by commas. You can enter a single number as well: '
+        },
+        {
+            type: 'confirm',
+            name: 'again',
+            message: 'Would you like to continue and add more number sets? ',
+            default: true
+        }
+    ];
+
+    const { again, ...answers } = await inquirer.prompt(prompts);
+    const newInputs = [...inputs, answers];
+    return again ? collectInputs(newInputs) : newInputs;
+};
+
+const main = async () => {
+    const inputs = await collectInputs();
+
+    for (let i = 0; i < inputs.length; i++) {
+        let array = _.split(inputs[i].numbers, ',');
+        let convertedArray = _.map(array, x => {
+            return parseInt(x);
+        });
+        let result = sub(...convertedArray);
+        console.log(
+            `The result of sub() on ${inputs[i].numbers} is: ${result}`
+        );
+    }
+};
+
+main();
