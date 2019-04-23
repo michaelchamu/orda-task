@@ -8,6 +8,8 @@ const headingStyle = {
     space: true, // define if the output text should have empty lines on top and on the bottom
     maxLength: '0' // define how many character can be on one line
 };
-const logStyle = { font: 'console', align: 'center', colors: ['red'] };
+const red = { font: 'console', align: 'center', colors: ['red'] };
+const cyan = { font: 'console', align: 'center', colors: ['cyan'] };
+const yellow = { font: 'console', align: 'center', colors: ['yellow'] };
 
-module.exports = { headingStyle, logStyle };
+module.exports = { headingStyle, red, yellow, cyan };
