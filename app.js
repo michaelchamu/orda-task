@@ -15,7 +15,11 @@ const main = async () => {
             return parseInt(value);
         });
         let result = sub(...array);
-        console.log(`The result of sub() on ${elements.numbers} is: ${result}`);
+        console.log(
+            `The result of sub() on ${elements.numbers} is: ${
+                isNaN(result) ? 'Non numeric value detected' : result
+            }`
+        );
     }
 };
 
