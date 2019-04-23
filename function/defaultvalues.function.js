@@ -1,6 +1,6 @@
 const cfonts = require('cfonts');
 const { sub } = require('./sub.function');
-cfonts.say('EXECUTING DEFAULT CALCULATION', {
+cfonts.say('DEFAULT CALCULATION', {
     font: 'shade', // define the font face
     align: 'center', // define text alignment
     colors: ['greenBright', 'white'], // define all colors
