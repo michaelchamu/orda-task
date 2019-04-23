@@ -3,7 +3,7 @@ const cfonts = require('cfonts');
 const { sub } = require('./function/sub.function');
 const { collectUserInput } = require('./function/inputs.function');
 const { defaultexecution } = require('./function/defaultvalues.function');
-const { headingStyle, logStyle } = require('./configs/cfont.configs');
+const { headingStyle, red } = require('./configs/cfont.configs');
 
 const main = async () => {
     cfonts.say('EXECUTING USER INPUTS FEATURE', headingStyle);
@@ -17,7 +17,7 @@ const main = async () => {
             `The result of sub() on ${elements.numbers} is: ${
                 isNaN(result) ? 'Non numeric value detected' : result
             }`,
-            logStyle
+            red
         );
     }
 };
